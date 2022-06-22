@@ -1,0 +1,19 @@
+/* :root{
+    --pink: #E53170;
+} */
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Generics */
+
+/* Utils */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
