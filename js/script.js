@@ -21,25 +21,13 @@ const resultTicket = document.getElementById('ticket-finish');
 
 //2- Al click del button genera inizo a controllare i valori
 buttonCreate.addEventListener('click', function() {
-    numberChilo.value
-    numberAge.value
+    const kms = numberChilo.value
+    const age = numberAge.value
+
+    console.log('kms')
+    console.log('age')
     
-    let priceKm = numberChilo * 0.21;
+    let priceKm = kms * 0.21;
     console.log('pricekm');
 
-    if(numberAge < 18){
-        priceKm *= ( (100-20) / 100 );
-        console.log('priceDiscount')
-    }
-    else if(numberAge > 65){
-        priceKm *= ( (100-40) / 100 )
-        console.log('over65')
-    }
-
-    const pricePrinted = priceKm.toFixed(2)
 })
-
-
-
-//4- Faccio comparire il prezzo
-resultTicket.innerText =  `Il prezzo totale del biglietto é: ${pricePrinted} €`
