@@ -19,41 +19,74 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Biglietto treno form</title>
 </head>
-<body>
-    <section class="bg-primary">
+<body class="bg-primary">
+    <section id="calculator-ticket">
         <!-- Titolo -->
-        <h1 class="text-center text-white mb-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <h1 class="text-center text-white py-3">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
 
-        <div class="container">
-            <!-- Nome e Cognome -->
-            <div>
-                <label for="username">Nome e Cognome</label>
-                <input type="text" id="username">
+        <div class="container bg-white rounded">
+            <div class="row justify-content-center">
+                <div class="col-10">
+                    <div class="row">
+                        <!-- Nome e Cognome -->
+                        <div class="col text-center mt-4">
+                            <label for="username" class="d-block mb-2">Nome e Cognome</label>
+                            <input type="text" id="username"> 
+                        </div>
+                        <!-- Km da percorrere -->
+                        <div class="col text-center mt-4">
+                            <label for="kms" class="d-block mb-2">Km da percorrere</label>
+                            <input type="number" id="kms">
+                        </div>
+                        <!-- Fascia d'età -->
+                        <div class="col text-center mt-4">
+                            <label for="age" class="d-block mb-2">Fascia d'età</label>
+                            <select name="age" id="age">
+                                <option value="17">Minorenne</option>
+                                <option value="18">Maggiorenne</option>
+                                <option value="66">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center my-4">
+                    <!-- Bottoni -->
+                    <button id="create" class="px-2 mx-2">Genera</button>
+                    <button id="delete" class="px-2 mx-2">Annulla</button>
+                </div>
             </div>
-
-            <!-- Km da percorrere -->
-            <div>
-                <label for="kms">Km da percorrere</label>
-                <input type="number" id="kms">
-            </div>
-
-            <!-- Fascia d'età -->
-            <div>
-                <label for="age">Fascia d'età</label>
-                <select name="age" id="age">
-                    <option value="Minor">Minorenne</option>
-                    <option value="Major">Maggiorenne</option>
-                    <option value="Over-65">Over 65</option>
-                </select>
-            </div>
-
-            <!-- Bottoni -->
-            <button id="create">Genera</button>
-            <button id="delete">Annulla</button>
         </div> 
+    </section>
 
+    <section id="my-ticket" class="ticket">
+        <h2 class="text-center text-white mt-5 fw-bold">IL TUO BIGLIETTO</h2>
         <!-- Biglietto -->
-        <p id="ticket-finish"></p>
+        <div class="container bg-white">
+            <span class="fs-4 fw-bold d-inline-block mt-3 px-3">DETTAGLIO PASSEGGERI</span>
+            <div class="row px-3">
+                <div class="col-3 bg-secondary mb-4">
+                    <span class="d-block fs-4 fw-bold mb-5 pt-3">NOME PASSEGGERO</span>
+                    <span class="d-block fs-3 fw-bold mb-3" id="username-ticket"></span>
+                </div>
+                <div class="col-3 ">
+                    <span class="d-block fs-4 fw-bold mb-5 pt-3">Offerta</span>
+                    <span class="d-block fs-4 my-2" id="discount"></span>
+                </div>
+                <div class="col-2">
+                    <span class="d-block fs-4 fw-bold mb-5 pt-3">Carrozza</span>
+                    <span class="d-block fs-5" id="carriage"></span>
+                </div>
+                <div class="col-2">
+                    <span class="d-block fs-4 fw-bold mb-5 pt-3">Codice CP</span>
+                    <span class="d-block fs-5" id="code"></span>
+                </div>
+                <div class="col-2">
+                    <span class="d-block fs-4 fw-bold  mb-5 pt-3">Costo biglietto</span>
+                    <span class="d-block fs-5" id="priceticket"></span>
+                </div>
+            </div>
+        </div>
+        <p ></p>
     </section>
 
     <script src="js/script.js"></script>
